@@ -7,14 +7,247 @@
     --light-grayish-cyan-v: hsl(189, 41%, 97%);
 }
 
-html {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+html, input {
     box-sizing: border-box;
 }
 
 body {
+    background: var(--light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+}
+
+.logo-container {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.logo {
+    pointer-events: none;
+}
+
+.app {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.operation {
+    margin-bottom: 20px;
+}
+
+.app-label {
+    display: block;
+    color: var(--dark-grayish-cyan);
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.app-input {
+    width: 100%;
+    padding-right: 15px;
+    background: var(--light-grayish-cyan-v);
+    border: none;
+    border-radius: 5px;
+    color: var(--very-dark-cyan);
+    text-align: right;
+    font-size: 24px;
     font-family: 'Space Mono', monospace;
 }
 
-/* form input {
+
+.operation-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 45%;
+    height: 40px;
+    margin-bottom: 15px;
+    background: var(--very-dark-cyan);;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+    font-size: 1.1rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.btn-custom {
+    box-sizing: border-box;
+    padding-right: 15px;
+    background: var(--light-grayish-cyan-v);
+    color: var(--very-dark-cyan);
+    text-align: right;
     font-size: 24px;
-} */
+    font-weight: 400;
+}
+
+.btn-num,
+.btn-reset {
+    cursor: pointer;
+}
+
+.app-input::placeholder,
+.btn-custom::placeholder {
+    color: var(--dark-grayish-cyan-v);
+
+}
+
+.app-result {
+    background: var(--very-dark-cyan);
+    border-radius: 15px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+
+.result {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.result-info {
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info-label {
+    display: block;
+    color: white;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.info-dsc {
+    color: var(--dark-grayish-cyan-v);
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.result-money {
+    position: absolute;
+    color: var(--strong-cyan);
+    font-size: 2rem;
+    font-weight: 900;
+    right: 0;
+}
+
+.btn-reset {
+    width: 100%;
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.disabled {
+    opacity: 0.2;
+}
+
+.enabled:hover {
+    background:hsl(172, 74%, 82%);
+}
+
+.app-input:focus,
+.btn-custom:focus {
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+}
+
+.btn-num:hover {
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.operation-warn {
+    position: relative;
+}
+
+.warn-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(253, 92, 92);
+    font-weight: 700;
+    font-size: .8rem;
+    z-index: 100;
+}
+
+.no-warn-label {
+    display: none;
+}
+
+.warn,
+.warn:focus {
+    border: 2px solid red;
+}
+
+@media screen and (min-width: 500px) {
+    .app {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding-top: 5%;
+    }
+
+    .app {
+        width: 800px;
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        padding: 30px;
+    }
+
+    .app-operation {
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    .app-result {
+        width: 40%;
+        padding-top: 70px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: relative;
+    }
+
+    .btn {
+        width: 30%;
+
+    }
+
+    .btn-reset {
+        position: absolute;
+        width: 80%;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

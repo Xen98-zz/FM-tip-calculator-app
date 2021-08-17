@@ -20,26 +20,62 @@
   </style> -->
 </head>
 <body>
+  <header class="logo-container">
+    <img class="logo" src="/images/logo.svg" alt="SPLITTER logo">
+  </header>
+  <main>
+    <article class="app">
 
-  Bill
+        <div class="app-operation">
+          <div class="operation">
+            <span class="app-label">Bill</span>
+            <div class="input-container">
+              <img class="icon" src="/images/icon-dollar.svg" alt="dollar icon">
+              <input class="app-input" type="number" placeholder="0">
+            </div>
+          </div>
+          <div class="operation">
+            <span class="app-label">Select Tip %</span>
+            <div class="operation-options">
+              <button class="btn btn-num">5%</button>
+              <button class="btn btn-num">10%</button>
+              <button class="btn btn-num">15%</button>
+              <button class="btn btn-num">25%</button>
+              <button class="btn btn-num">50%</button>
+              <input type="number" class="btn btn-custom" placeholder="Custom">
+            </div>
+          </div>
+          <div class="operation operation-warn">
+            <span class="app-label">Number of People</span>
+            <!-- class warn-label -->
+            <span class="no-warn-label">Can't be zero</span> 
+            <div class="input-container">
+              <img class="icon" src="/images/icon-person.svg" alt="people icon">
+              <!-- class warn -->
+              <input class="app-input" type="number" placeholder="0">
+            </div>
+          </div>
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+        <div class="app-result">
+          <div class="result">
+            <div class="result-info">
+              <span class="info-label">Tip Amount</span>
+              <span class="info-dsc">/ person</span>
+            </div>
+            <span class="result-money">$0.00</span>
+          </div>
+          <div class="result">
+            <div class="result-info">
+              <span class="info-label">Total</span>
+              <span class="info-dsc">/ person</span>
+            </div>
+            <span class="result-money">$0.00</span>
+          </div>
+          <button class="btn btn-reset enabled">Reset</button>
+        </div>
+    </article>
+  </main>
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
