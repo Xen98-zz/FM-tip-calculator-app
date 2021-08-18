@@ -31,28 +31,28 @@
             <span class="app-label">Bill</span>
             <div class="input-container">
               <img class="icon" src="./images/icon-dollar.svg" alt="dollar icon">
-              <input class="app-input" type="number" placeholder="0">
+              <input id="bill" class="app-input" type="number" placeholder="0">
             </div>
           </div>
           <div class="operation">
             <span class="app-label">Select Tip %</span>
-            <div class="operation-options">
-              <button class="btn btn-num">5%</button>
-              <button class="btn btn-num">10%</button>
-              <button class="btn btn-num">15%</button>
-              <button class="btn btn-num">25%</button>
-              <button class="btn btn-num">50%</button>
-              <input type="number" class="btn btn-custom" placeholder="Custom">
+            <div id="tip" class="operation-options">
+              <button class="btn btn-num" value="5">5%</button>
+              <button class="btn btn-num" value="10">10%</button>
+              <button class="btn btn-num" value="15">15%</button>
+              <button class="btn btn-num" value="25">25%</button>
+              <button class="btn btn-num" value="50">50%</button>
+              <input id="tip-custom" type="number" class="btn btn-custom" placeholder="Custom">
             </div>
           </div>
           <div class="operation operation-warn">
             <span class="app-label">Number of People</span>
             <!-- class warn-label -->
-            <span class="no-warn-label">Can't be zero</span> 
+            <span id="warn-label" class="no-warn-label">Can't be zero</span> 
             <div class="input-container">
               <img class="icon" src="./images/icon-person.svg" alt="people icon">
               <!-- class warn -->
-              <input class="app-input" type="number" placeholder="0">
+              <input id="people" class="app-input" type="number" placeholder="0">
             </div>
           </div>
         </div>
@@ -63,16 +63,16 @@
               <span class="info-label">Tip Amount</span>
               <span class="info-dsc">/ person</span>
             </div>
-            <span class="result-money">$0.00</span>
+            <span id="tip-amount" class="result-money">$0.00</span>
           </div>
           <div class="result">
             <div class="result-info">
               <span class="info-label">Total</span>
               <span class="info-dsc">/ person</span>
             </div>
-            <span class="result-money">$0.00</span>
+            <span id="total" class="result-money">$0.00</span>
           </div>
-          <button class="btn btn-reset enabled">Reset</button>
+          <button id="reset" class="btn btn-reset disabled">Reset</button>
         </div>
     </article>
   </main>
@@ -82,6 +82,6 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <script src="./js/app.js"></script>
+  <script src="./js/app.js" type="module"></script>
 </body>
 </html>

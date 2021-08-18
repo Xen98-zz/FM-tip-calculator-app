@@ -180,6 +180,11 @@ body {
     color: var(--very-dark-cyan);
 }
 
+.active {
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
 .operation-warn {
     position: relative;
 }
