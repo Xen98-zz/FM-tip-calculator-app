@@ -58,7 +58,7 @@ const calculator = (e) => {
 
     btnEnabledDisabled();
 
-    if(tipAmount > 0 && total > 0  && people > 0) {
+    if(tipAmount >= 0 && total > 0  && people > 0) {
         printResults(tipAmount, total);
     }   
 }
@@ -88,9 +88,9 @@ const reset = (e) => {
     resetBtn.classList.remove('enabled');
 }
 
-optBill.addEventListener('focusout', calculator);
-optPeople.addEventListener('focusout', calculator);
-optTipCustom.addEventListener('focusout', calculator);
+optBill.addEventListener('keyup', calculator);
+optPeople.addEventListener('keyup', calculator);
+optTipCustom.addEventListener('keyup', calculator);
 
 for(let i = 0; i < optTipBtn.length; i++) {
     optTipBtn[i].addEventListener('click', calculator);

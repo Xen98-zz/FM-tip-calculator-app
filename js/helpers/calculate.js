@@ -1,6 +1,6 @@
 const calculate = (tip, bill, people)=> {
 
-    if(tip > 0 && bill > 0 && people > 0) {
+    if(tip >= 0 && bill > 0 && people > 0) {
         const tipValue = (bill * tip) / 100;
         const tipAmount = tipValue / people;
         const total = parseFloat((bill + tipValue) / people);
